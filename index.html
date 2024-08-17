@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> yoyoyo</title>
+</head>
+
+<body>
+<form>
+	<label for='input'>Input</label>
+	<input type="text" id="input" name = "input"><br>
+	
+	<script>
+		function getInput(){
+			let userInput = document.getElementById('input').value;
+			console.log(userInput);
+			document.getElementById('input').value = '';
+
+		}
+		document.getElementById('input').addEventListener('keydown', function(event){
+			if(event.key == 'Enter'){
+				event.preventDefault();
+				getInput();
+			}
+		});
+	</script>
+
+
+</body>
+
+</html>
